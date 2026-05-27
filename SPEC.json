@@ -1,0 +1,24 @@
+{
+  "title": "NetScope",
+  "one_liner": "A browser-based network diagnostics dashboard that lets you manually log, annotate, and visualize your network health observations in one place.",
+  "problem_statement": "Network engineers and power users constantly switch between CLI tools, terminal windows, and mental notes to track what is happening on their networks. There is no lightweight, unified place to record observations, spot patterns, and maintain a running log of network events without spinning up heavyweight monitoring infrastructure. NetScope gives technically-minded users a fast, visual scratchpad for network diagnostics that lives entirely in the browser.",
+  "target_user": "Network engineers, sysadmins, and technically advanced home users who live in the CLI but want a faster visual layer for logging and reviewing network observations without installing native software or running a backend.",
+  "features": [
+    "Network Event Log: A timestamped, manually-entered log where users can record network events (e.g. latency spikes, drops, device appearances) with tags like 'WiFi', 'Wired', 'DNS', 'Routing' — entries are stored in localStorage and displayed in a filterable, reverse-chronological feed.",
+    "Device Tracker: A simple table where users can manually register known devices (hostname, IP, MAC, notes, interface type) and mark their last-seen status — data persists in localStorage and supports inline editing and quick search.",
+    "Diagnostics Cheat Sheet: A curated, searchable reference panel of common CLI diagnostic commands (ping, traceroute, nmap, netstat, dig, etc.) with platform tabs for macOS/Linux/Windows, copyable snippets, and user-addable custom commands saved to localStorage."
+  ],
+  "non_goals": [
+    "No real-time network scanning, packet capture, or live data ingestion from the OS or hardware",
+    "No backend, server, or API integrations — all data is manual and local only",
+    "No user authentication, accounts, or cloud sync of any kind",
+    "No automated alerting, notifications, or scheduled polling"
+  ],
+  "technical_constraints": [
+    "Client-side only — no backend, no API calls, no server-side rendering beyond static Next.js export",
+    "localStorage persistence for all user data (log entries, devices, custom commands)",
+    "No authentication or user accounts of any kind",
+    "Built as a single-page Next.js app using React and Tailwind CSS",
+    "Must function fully offline after initial page load"
+  ]
+}
